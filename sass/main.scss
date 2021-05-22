@@ -1,0 +1,28 @@
+/*--------------------------\
+         @Imports
+\--------------------------*/
+//Lib
+@import "lib/variables";
+@import "lib/mixins";
+@import "lib/place-holders";
+
+//layout
+@import "layout/header";
+@import "layout/recomendation";
+@import "layout/articles";
+@import "layout/footer";
+
+
+
+/*--------------------------\
+         Global
+\--------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  @extend %global-font; 
+  font-size: 65.5%;
+}
+
