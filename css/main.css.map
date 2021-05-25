@@ -1,1 +1,4 @@
-{"version":3,"sourceRoot":"","sources":["../sass/main.scss","../sass/lib/_variables.scss","../sass/lib/_mixins.scss","../sass/lib/_place-holders.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;ACAA;AAAA;AAAA;AAcA;AAAA;AAAA;ACdA;AAAA;AAAA;ACAA;AAAA;AAAA;AAGA;EACC,aFaU;;;ADDX;AAAA;AAAA;AAGA;EACE;EACA;;;AAEF;EAEE","file":"main.css"}
+{"version":3,"sourceRoot":"../sass",
+    "sources":["../sass/main.scss","../sass/lib/_variables.scss","../sass/lib/_mixins.scss","../sass/lib/_place-holders.scss"],
+    "names":[],"mappings":"AAAA;AAAA;AAAA;ACAA;AAAA;AAAA;AAcA;AAAA;AAAA;ACdA;AAAA;AAAA;ACAA;AAAA;AAAA;AAGA;EACC,aFaU;;;ADDX;AAAA;AAAA;AAGA;EACE;EACA;;;AAEF;EAEE",
+        "file":"main.css"}
