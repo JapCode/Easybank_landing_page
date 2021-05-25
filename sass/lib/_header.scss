@@ -1,0 +1,25 @@
+.overBar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    position: fixed;
+    z-index: 3;
+    background: $white;
+    button {
+        display: none;
+    }
+    &__title {
+        padding: 0 1em;
+    }
+    &__mobile-menu {
+        .open{
+            padding: 0 1em;
+        }
+        .close{
+            display: none;
+        }
+    }
+}

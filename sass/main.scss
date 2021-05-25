@@ -1,0 +1,56 @@
+/*--------------------------\
+         @Imports
+\--------------------------*/
+@import './lib/variables';
+@import './lib/mixins';
+@import './lib/header';
+@import './lib/mobileMenu';
+@import './lib/blockHeader';
+@import './lib/recomendation';
+@import './lib/articles';
+@import './lib/footer';
+/*--------------*\
+    $Colors
+\*--------------*/
+/*--------------*\
+    $Fonts
+\*--------------*/
+/*--------------------------\
+         @Mixins
+\--------------------------*/
+/*--------------------------\
+      %Place holders
+\--------------------------*/
+html {
+    font-family: $fuente;
+  }
+  
+  /*--------------------------\
+           Global
+  \--------------------------*/
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    // font-size: 65.5%;
+  }
+
+  button {
+    padding: 1em 2em;
+    border: none;
+    color: $LightGrayishBlue;
+    border-radius: 50px;
+    font-weight: 700;
+    background: linear-gradient(0.25turn,$LimeGreen,$BrightCyan);
+}
+
+h1, h2, h3, h4 {
+  color: $DarkBlue;
+}
+
+p, span, i {
+  color: $GrayishBlue;
+}
+
