@@ -1,0 +1,36 @@
+footer {
+  background-color: $DarkBlue;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+.blockSocial {
+  &__logo {
+    padding: 30px 0;
+  }
+  &__socialMedia {
+    margin: 0 auto;
+    max-width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.blockDataFooter {
+  margin: 20px;
+  &__item {
+    padding: 5px;
+    list-style: none;
+    @extend %footer-links;
+  }
+  &__data {
+    list-style: none;
+  }
+  &__End {
+    padding-bottom: 5px;
+  }
+  &__legend {
+    margin-bottom: 15px;
+    @extend %footer-links;
+  }
+}

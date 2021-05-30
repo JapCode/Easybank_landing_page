@@ -10,33 +10,41 @@
 /*--------------------------\
       %Place holders
 \--------------------------*/
-button {
+.btn {
   border-radius: 100px;
   outline: none;
   cursor: pointer;
-  padding: 1em 2em;
+  padding: 15px 30px;
   border: none;
   color: #f3f4f6;
-  font-weight: 500;
-  font-size: 1.8rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(0.25turn, #31d35c, #2bb7da);
 }
 
-.blockArticles h2, .blockRecomendation h2 {
+.blockRecomendation h2, .blockArticles h2 {
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 2.6rem;
 }
 
-.blockArticles__articles .articleBox__data h3, .blockRecomendation__cards h3 {
+.blockRecomendation__cards h3, .blockArticles__articles .articleBox__data h3 {
   font-size: 2rem;
   font-weight: 500;
   line-height: 2.6rem;
 }
 
-.blockRecomendation__cards p, .blockRecomendation p, .blockHeader__data p {
+.blockHeader__data p, .blockRecomendation p, .blockRecomendation__cards p {
   font-size: 1.8rem;
   font-weight: 400;
+  line-height: 2.3rem;
+}
+
+.blockDataFooter__item, .blockDataFooter__legend {
+  font-size: 1.5rem;
+  font-weight: 300;
   line-height: 2.3rem;
 }
 
@@ -46,23 +54,34 @@ header {
   height: 50px;
   z-index: 10;
 }
+
 header .overBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.5em 0;
   background: white;
 }
+
 header .overBar button {
   display: none;
 }
+
 header .overBar__title {
   padding: 0 1em;
 }
+
 header .overBar__mobile-menu .open {
   display: block;
   padding: 0 1em;
 }
+
 header .overBar__mobile-menu .close {
   display: none;
 }
@@ -79,24 +98,28 @@ header .overBar__mobile-menu .close {
   padding-left: 1em;
   padding-right: 1em;
 }
+
 .blockHeader__img {
   width: 100%;
   margin: 0 auto;
   position: relative;
   bottom: 80px;
 }
+
 .blockHeader__data {
   margin: auto;
   text-align: center;
   position: relative;
   bottom: 50px;
 }
+
 .blockHeader__data h1 {
   padding: 0 1em;
   margin-bottom: 0.5em;
   font-size: 3.5rem;
   font-weight: 500;
 }
+
 .blockHeader__data p {
   padding: 0 1em;
   margin: 1em 0 2em 0;
@@ -107,28 +130,39 @@ header .overBar__mobile-menu .close {
   height: auto;
   background-color: #f3f4f6;
   padding: 6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
+
 .blockRecomendation__data {
   padding: 0 3em;
   margin-bottom: 3em;
 }
+
 .blockRecomendation h2 {
   margin-bottom: 1em;
 }
+
 .blockRecomendation__cards {
   padding: 0 3em;
 }
+
 .blockRecomendation__cards img {
   margin-bottom: 0.5em;
   height: 70px;
   width: 70px;
 }
+
 .blockRecomendation__cards h3 {
   margin-bottom: 1em;
 }
+
 .blockRecomendation__cards p {
   margin-bottom: 1.5em;
 }
@@ -143,50 +177,115 @@ header .overBar__mobile-menu .close {
   padding: 4em 0;
   text-align: center;
 }
+
 .blockArticles h2 {
   margin-bottom: 1em;
 }
+
 .blockArticles__articles {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
 }
+
 .blockArticles__articles .articleBox {
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: auto;
-  margin-bottom: 1em;
+  padding-bottom: 1em;
   text-align: start;
 }
+
 .blockArticles__articles .articleBox .articleImg {
   width: 100%;
   max-width: 720px;
   height: auto;
-  padding: 1em 0;
+  padding-bottom: 15px;
   margin: 0 auto;
 }
+
 .blockArticles__articles .articleBox .articleImg img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   width: 100%;
   height: 200px;
 }
+
 .blockArticles__articles .articleBox__data {
   padding: 0 2em;
 }
+
 .blockArticles__articles .articleBox__data i {
   font-size: 1rem;
   font-weight: 300;
   line-height: 2.3rem;
   padding-bottom: 0.5rem;
 }
+
 .blockArticles__articles .articleBox__data h3 {
   padding-bottom: 1rem;
 }
+
 .blockArticles__articles .articleBox__data p {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 2.3rem;
+}
+
+footer {
+  background-color: #2d314d;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+.blockSocial__logo {
+  padding: 30px 0;
+}
+
+.blockSocial__socialMedia {
+  margin: 0 auto;
+  max-width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.blockDataFooter {
+  margin: 20px;
+}
+
+.blockDataFooter__item {
+  padding: 5px;
+  list-style: none;
+}
+
+.blockDataFooter__data {
+  list-style: none;
+}
+
+.blockDataFooter__End {
+  padding-bottom: 5px;
+}
+
+.blockDataFooter__legend {
+  margin-bottom: 15px;
 }
 
 /*--------------------------\
@@ -202,12 +301,16 @@ html {
   font-size: 65.5%;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: #2d314d;
 }
 
-p, span, i {
+p,
+span,
+i {
   color: #9698a6;
 }
-
 /*# sourceMappingURL=main.css.map */

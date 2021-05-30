@@ -6,15 +6,17 @@
 @import "lib/mixins";
 @import "lib/place-holders";
 
-
 /*--------------------------\
          Media Qery
 \--------------------------*/
-body{
-  @include respond-to(900px){
-
-
-
+body {
+  @include respond-to(900px) {
+    .blockArticles {
+      &__articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        // display: flex;
+      }
+    }
   }
 }
-

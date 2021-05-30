@@ -1,0 +1,24 @@
+/*--------------------------\
+         @Imports
+\--------------------------*/
+/*----------------------------\
+       $Variables
+ \----------------------------*/
+/*----------------------------------\
+          @MIXINS
+ \---------------------------------*/
+/*--------------------------\
+      %Place holders
+\--------------------------*/
+/*--------------------------\
+         Media Qery
+\--------------------------*/
+@media only screen and (min-width: 900px) {
+  body .blockArticles__articles {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+/*# sourceMappingURL=desktop.css.map */

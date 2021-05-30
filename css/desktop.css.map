@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;6BAE6B;ACF7B;;gCAEgC;ACFhC;;qCAEqC;ACFrC;;6BAE6B;AHM7B;;6BAE6B;AEL3B,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EFM1C,AAGM,IAHF,CAGG,wBAAU,CAAC;IACV,OAAO,EAAE,IAAI;IACb,qBAAqB,EAAE,oCAAoC;GAE5D",
+    "sources": [
+        "../sass/desktop.scss",
+        "../sass/lib/_variables.scss",
+        "../sass/lib/_mixins.scss",
+        "../sass/lib/_place-holders.scss"
+    ],
+    "names": [],
+    "file": "desktop.css"
+}
