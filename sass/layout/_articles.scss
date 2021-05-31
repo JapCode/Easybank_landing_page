@@ -18,7 +18,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
+    gap: 35px;
 
     .articleBox {
       background-color: $white;
@@ -38,6 +38,7 @@
         padding-bottom: 15px;
         margin: 0 auto;
         img {
+          object-fit: cover;
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
           width: 100%;

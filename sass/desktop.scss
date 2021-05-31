@@ -11,10 +11,83 @@
 \--------------------------*/
 body {
   @include respond-to(900px) {
+    .header {
+      width: 98vw;
+      height: 70px;
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      .overBar {
+        width: 100%;
+        padding: 0 100px;
+        .btn {
+          display: block;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      &__item {
+        margin: 0 10px;
+        a {
+          color: $DarkBlue;
+        }
+      }
+    }
+    .overBar__mobile-menu {
+      display: none;
+    }
+    .blockHeader {
+      padding: 0;
+      background-image: url(/images/bg-intro-desktop.svg);
+      background-position: calc(58% - -300px) -182px;
+      background-size: cover;
+      display: flex;
+      flex-direction: row-reverse;
+      &__img {
+        width: 50%;
+        position: static;
+      }
+      &__data {
+        margin: auto;
+        width: 50%;
+        white-space: pre-wrap;
+        h1 {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .blockRecomendation {
+      &__cards {
+        display: flex;
+      }
+    }
+    .card {
+      padding: 0 20px;
+    }
     .blockArticles {
       &__articles {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
+        justify-content: center;
+      }
+    }
+  }
+  @include respond-to(1229px) {
+    .blockHeader {
+      background-position: calc(58% - -540px) -351px;
+    }
+    .blockArticles {
+      &__articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        &__data {
+          padding: 0 20px;
+        }
         // display: flex;
       }
     }

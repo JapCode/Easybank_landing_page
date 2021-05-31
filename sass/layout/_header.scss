@@ -1,33 +1,36 @@
-header{
+.header {
   position: fixed;
   width: 100vw;
   height: 50px;
   z-index: 10;
-.overBar {
-
+  .overBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 0;
     background: $white;
-    button {
-        display: none;
+    .btn {
+      display: none;
     }
     &__title {
-        padding: 0 1em;
+      padding: 0 1em;
     }
     &__mobile-menu {
-        .open{
-            display: block;
-            padding: 0 1em;
-        }
-        .close{
-            display: none;
-        }
+      .open {
+        display: block;
+        padding: 0 1em;
+      }
+      .close {
+        display: none;
+      }
     }
+  }
 }
-}
-.menu{
+.menu {
   display: none;
   list-style: none;
+  &__item a {
+    text-decoration: none;
+    @extend %h3-text;
+  }
 }

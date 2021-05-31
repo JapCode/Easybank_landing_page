@@ -14,11 +14,100 @@
          Media Qery
 \--------------------------*/
 @media only screen and (min-width: 900px) {
+  body .header {
+    width: 98vw;
+    height: 70px;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .header .overBar {
+    width: 100%;
+    padding: 0 100px;
+  }
+  body .header .overBar .btn {
+    display: block;
+  }
+  body .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .menu__item {
+    margin: 0 10px;
+  }
+  body .menu__item a {
+    color: #2d314d;
+  }
+  body .overBar__mobile-menu {
+    display: none;
+  }
+  body .blockHeader {
+    padding: 0;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-position: calc(58% - -300px) -182px;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  body .blockHeader__img {
+    width: 50%;
+    position: static;
+  }
+  body .blockHeader__data {
+    margin: auto;
+    width: 50%;
+    white-space: pre-wrap;
+  }
+  body .blockHeader__data h1 {
+    margin: 0;
+  }
+  body .blockHeader__data p {
+    margin: 0;
+  }
+  body .blockRecomendation__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .card {
+    padding: 0 20px;
+  }
   body .blockArticles__articles {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    -ms-grid-columns: (minmax(320px, 40%))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1229px) {
+  body .blockHeader {
+    background-position: calc(58% - -540px) -351px;
+  }
+  body .blockArticles__articles {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  body .blockArticles__articles__data {
+    padding: 0 20px;
   }
 }
 /*# sourceMappingURL=desktop.css.map */

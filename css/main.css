@@ -30,7 +30,7 @@
   line-height: 2.6rem;
 }
 
-.blockRecomendation__cards h3, .blockArticles__articles .articleBox__data h3 {
+.menu__item a, .blockRecomendation__cards h3, .blockArticles__articles .articleBox__data h3 {
   font-size: 2rem;
   font-weight: 500;
   line-height: 2.6rem;
@@ -48,14 +48,14 @@
   line-height: 2.3rem;
 }
 
-header {
+.header {
   position: fixed;
   width: 100vw;
   height: 50px;
   z-index: 10;
 }
 
-header .overBar {
+.header .overBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,26 +69,30 @@ header .overBar {
   background: white;
 }
 
-header .overBar button {
+.header .overBar .btn {
   display: none;
 }
 
-header .overBar__title {
+.header .overBar__title {
   padding: 0 1em;
 }
 
-header .overBar__mobile-menu .open {
+.header .overBar__mobile-menu .open {
   display: block;
   padding: 0 1em;
 }
 
-header .overBar__mobile-menu .close {
+.header .overBar__mobile-menu .close {
   display: none;
 }
 
 .menu {
   display: none;
   list-style: none;
+}
+
+.menu__item a {
+  text-decoration: none;
 }
 
 .blockHeader {
@@ -190,7 +194,7 @@ header .overBar__mobile-menu .close {
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
+  gap: 35px;
 }
 
 .blockArticles__articles .articleBox {
@@ -218,6 +222,8 @@ header .overBar__mobile-menu .close {
 }
 
 .blockArticles__articles .articleBox .articleImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
