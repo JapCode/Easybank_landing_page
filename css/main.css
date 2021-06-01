@@ -18,7 +18,7 @@ button {
   border: none;
   color: #f3f4f6;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   background: linear-gradient(0.25turn, #31d35c, #2bb7da);
   transition: all 0.5s;
 }
@@ -39,7 +39,7 @@ button:hover {
 }
 
 .blockRecomendation__cards p, .blockRecomendation p, .blockHeader__data p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.3rem;
 }
@@ -66,44 +66,67 @@ header .overBar__title {
 header .overBar__mobile-menu {
   padding: 0 2em;
 }
-header .overBar__mobile-menu .hamburguer {
+header .overBar__mobile-menu .lbl-menu .spn1, header .overBar__mobile-menu .spn2, header .overBar__mobile-menu .spn3 {
+  position: relative;
+  background: #2d314d;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+header .overBar__mobile-menu .spn2 {
+  margin: 5px 0;
+}
+header .overBar__options .menu {
+  display: none;
+  transition: all 500ms ease;
+}
+header .overBar .check {
   display: none;
 }
-
-.menu {
-  display: none;
+header .overBar .check:checked ~ .overBar__options .menu {
+  display: block;
+  position: absolute;
+  padding: 2em;
+  height: 100vh;
+  top: 100%;
+  left: 0;
+  right: 0;
   list-style: none;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(45, 49, 77, 0.8), rgba(255, 255, 255, 0.5));
+}
+header .overBar .check:checked ~ .overBar__options .menu__item {
+  padding: 2em 1em;
+  background: white;
+}
+header .overBar .check:checked ~ .overBar__options .menu__item:first-child {
+  border-radius: 10px 10px 0 0;
+}
+header .overBar .check:checked ~ .overBar__options .menu__item:last-child {
+  border-radius: 0 0 10px 10px;
+}
+header .overBar .check:checked ~ .overBar__options .menu__item a {
+  text-decoration: none;
+  color: #2d314d;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+header .overBar .check:checked ~ .overBar__options .menu__item a:after {
+  color: pink;
+}
+header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn1 {
+  transform: rotate(140deg);
+  top: 5px;
+}
+header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn2 {
+  opacity: 0;
+}
+header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
+  transform: rotate(-140deg);
+  top: -11px;
 }
 
-@media screen and (min-width: 1024px) {
-  header {
-    height: auto;
-    position: sticky;
-  }
-  header .overBar {
-    max-width: 1024px;
-    margin: auto;
-  }
-  header .overBar .menu {
-    display: flex;
-  }
-  header .overBar .menu__item a {
-    color: #9698a6;
-    font-size: 1.4em;
-    text-decoration: none;
-    padding: 0 1em;
-  }
-  header .overBar .menu__item a:hover {
-    padding-bottom: 30px;
-    border-bottom: 3px solid linear-gradient(0.25turn, #31d35c, #2bb7da);
-  }
-  header .overBar__request {
-    display: block;
-  }
-  header .overBar__mobile-menu {
-    display: none;
-  }
-}
 .blockHeader {
   background-image: url(/images/bg-intro-mobile.svg);
   background-repeat: no-repeat;
@@ -134,28 +157,6 @@ header .overBar__mobile-menu .hamburguer {
   margin: 1em 0 2em 0;
 }
 
-@media screen and (min-width: 1024px) {
-  .blockHeader {
-    height: 550px;
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: #fafafa;
-    background-image: url(/images/bg-intro-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: 1200px;
-    background-position-x: 550px;
-    background-position-y: -250px;
-  }
-  .blockHeader__img {
-    width: auto;
-    zoom: 3;
-  }
-  .blockHeader__data {
-    width: 40%;
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-}
 .blockRecomendation {
   width: 100%;
   height: auto;

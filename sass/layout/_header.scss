@@ -1,9 +1,10 @@
 header{
-  position: fixed;
-  width: 100vw;
-  height: 50px;
-  background: $white;
-  z-index: 10;
+position: fixed;
+width: 100vw;
+height: 50px;
+background: $white;
+z-index: 10;
+
 .overBar {
     display: flex;
     justify-content: space-between;
@@ -17,45 +18,71 @@ header{
     }
     &__mobile-menu {
         padding: 0 2em;
-        .hamburguer {
-            display: none;
+        .lbl-menu .spn1, .spn2, .spn3{
+            position: relative;
+            background: $DarkBlue;
+            width: 30px;
+            height: 3px;
+            border-radius: 5px;
+            transition: all 500ms ease;
+        }
+        .spn2{
+            margin: 5px 0;
         }
     }
-}
-}
-.menu{
-  display: none;
-  list-style: none;
-}
-
-@media screen and (min-width: 1024px) {
-
-    header {
-        height: auto;
-        position: sticky;
-        .overBar {
-            max-width: 1024px;
-            margin: auto;
-            .menu {
-                display: flex;
-                &__item a{
-                    color: $GrayishBlue;
-                    font-size: 1.4em;
-                    text-decoration: none;
-                    padding: 0 1em;
-                    // transition: all 0.5s;
-                    &:hover{
-                        padding-bottom: 30px;
-                        border-bottom: 3px solid $Gradient;
+    &__options .menu{
+        display: none;
+        transition: all 500ms ease;
+    }
+    .check{
+        display: none;
+        &:checked {
+            & ~ .overBar__options .menu {
+                display: block;
+                position: absolute;
+                padding: 2em;
+                height: 100vh;
+                top: 100%;
+                left: 0;
+                right: 0;
+                list-style: none;
+                text-align: center;
+                background: linear-gradient(to bottom, $DarkBlueO, $whiteO);
+                &__item {
+                    padding: 2em 1em;
+                    background: $white;
+                    &:first-child {
+                        border-radius: 10px 10px 0 0;
+                    }
+                    &:last-child {
+                        border-radius: 0 0 10px 10px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $DarkBlue;
+                        font-size: $p-size;
+                        font-weight: $fontMedium;
+                    }
+                    a:after{
+                        color: pink;
                     }
                 }
             }
-            &__request {
-                display: block;
-            }
-            &__mobile-menu {
-                display: none;
+            & ~ .overBar__mobile-menu .lbl-menu {
+                .spn1 {
+                    transform: rotate(140deg);
+                    top: 5px;
+                }
+                .spn2 {
+                    opacity: 0;
+                }
+                .spn3 {
+                    transform: rotate(-140deg);
+                    top: -11px;
+                }
             }
         }
     }
 }
+}
+

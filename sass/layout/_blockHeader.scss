@@ -29,27 +29,3 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .blockHeader{
-        height: 550px;
-        display: flex;
-        flex-direction: row-reverse;
-        background-color: $VeryLightGray;
-        background-image: url(/images/bg-intro-desktop.svg);
-        background-repeat: no-repeat;
-        background-size: 1200px;
-        background-position-x: 550px;
-        background-position-y: -250px;
-        &__img {
-            width: auto;
-            zoom: 3;
-        }
-        &__data {
-            width: 40%;
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-    }
-}
-
-

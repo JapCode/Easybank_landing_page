@@ -6,6 +6,7 @@
 //Primary Colors 
 
 $DarkBlue: hsl(233, 26%, 24%);
+$DarkBlueO:hsl(233, 26%, 24%, 0.8);
 $LimeGreen: hsl(136, 65%, 51%);
 $BrightCyan: hsl(192, 70%, 51%);
 
@@ -15,8 +16,11 @@ $GrayishBlue: hsl(233, 8%, 62%);
 $LightGrayishBlue: hsl(220, 16%, 96%);
 $VeryLightGray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
+$whiteO:hsl(0, 0%, 100%, 0.5);
 
+//Gradientes Variables
 $Gradient: linear-gradient(0.25turn,$LimeGreen,$BrightCyan);
+
 
 //FONT
 $baseFont: "Public Sans", Sans-serif;
@@ -30,7 +34,7 @@ $fontBold: 500;
 $h1-size: 3.5rem;
 $h2-size: 2.5rem;
 $h3-size: 2rem;
-$p-size: 1.8rem;
+$p-size: 1.5rem;
 
 //LINE HEIGHT
 $h-height: 2.6rem;
