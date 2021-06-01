@@ -19,8 +19,9 @@ body {
       display: flex;
       justify-content: space-between;
       .overBar {
+        z-index: 3;
         width: 100%;
-        padding: 0 100px;
+        padding: 0 120px 0 100px;
         .btn {
           display: block;
         }
@@ -36,52 +37,60 @@ body {
         }
       }
     }
+    .container {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
     .overBar__mobile-menu {
       display: none;
     }
     // for hero
     .blockHeader {
-      position: relative;
       padding: 0;
       display: flex;
+      align-items: center;
       flex-direction: row-reverse;
       justify-content: space-around;
       background-image: none;
       overflow: hidden;
       &__img {
-        width: 450px;
-        position: static;
+        position: absolute;
+        z-index: 2;
+        width: 41%;
+        top: -100px;
+        right: -66px;
       }
       &__backgroundImg {
-        position: absolute;
-        top: -71px;
-        right: -171px;
+        // position: absolute;
         display: block;
         background-image: url(/images/bg-intro-desktop.svg);
-        background-position: top;
+        background-position: calc(50% - -130px) -144px;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         width: 741px;
-        height: 621px;
-        z-index: -1;
+        height: 415px;
       }
       &__data {
         text-align: start;
         margin: auto;
-        width: 350px;
+        width: 400px;
         // white-space: pre-wrap;
         h1 {
           padding: 0;
+          padding-top: 60px;
           margin: 0;
         }
         p {
-          padding: 30px 0;
+          padding: 20px 0;
           margin: 0;
         }
       }
     }
     // for section of recomendations
     .blockRecomendation {
+      /* position: absolute;
+      z-index: 2; */
       text-align: start;
       padding: 80px 0;
       &__cards {
@@ -93,6 +102,10 @@ body {
       padding: 0 20px;
     }
     .blockArticles {
+      h2 {
+        padding-left: 80px;
+        text-align: start;
+      }
       &__articles {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
@@ -124,8 +137,6 @@ body {
       &__backgroundImg {
         top: -196px;
         right: -173px;
-        width: 890px;
-        height: 726px;
       }
     }
     .blockArticles {

@@ -26,8 +26,9 @@
             justify-content: space-between;
   }
   body .header .overBar {
+    z-index: 3;
     width: 100%;
-    padding: 0 100px;
+    padding: 0 120px 0 100px;
   }
   body .header .overBar .btn {
     display: block;
@@ -46,15 +47,22 @@
   body .menu__item a {
     color: #2d314d;
   }
+  body .container {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
   body .overBar__mobile-menu {
     display: none;
   }
   body .blockHeader {
-    position: relative;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -65,36 +73,38 @@
     overflow: hidden;
   }
   body .blockHeader__img {
-    width: 450px;
-    position: static;
+    position: absolute;
+    z-index: 2;
+    width: 41%;
+    top: -100px;
+    right: -66px;
   }
   body .blockHeader__backgroundImg {
-    position: absolute;
-    top: -71px;
-    right: -171px;
     display: block;
     background-image: url(/images/bg-intro-desktop.svg);
-    background-position: top;
+    background-position: calc(50% - -130px) -144px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 741px;
-    height: 621px;
-    z-index: -1;
+    height: 415px;
   }
   body .blockHeader__data {
     text-align: start;
     margin: auto;
-    width: 350px;
+    width: 400px;
   }
   body .blockHeader__data h1 {
     padding: 0;
+    padding-top: 60px;
     margin: 0;
   }
   body .blockHeader__data p {
-    padding: 30px 0;
+    padding: 20px 0;
     margin: 0;
   }
   body .blockRecomendation {
+    /* position: absolute;
+      z-index: 2; */
     text-align: start;
     padding: 80px 0;
   }
@@ -106,6 +116,10 @@
   }
   body .card {
     padding: 0 20px;
+  }
+  body .blockArticles h2 {
+    padding-left: 80px;
+    text-align: start;
   }
   body .blockArticles__articles {
     display: -ms-grid;
@@ -147,8 +161,6 @@
   body .blockHeader__backgroundImg {
     top: -196px;
     right: -173px;
-    width: 890px;
-    height: 726px;
   }
   body .blockArticles__articles {
     display: -ms-grid;
