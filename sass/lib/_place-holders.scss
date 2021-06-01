@@ -10,8 +10,11 @@
   color: $LightGrayishBlue;
   font-weight: $fontBold;
   font-size: $p-size;
-  background: linear-gradient(0.25turn,$LimeGreen,$BrightCyan);
-
+  background: $Gradient;
+  transition: all 0.5s;
+  &:hover{
+    opacity: 0.5;
+  }
 }
 %h2-text{
   font-size: $h2-size;

@@ -18,8 +18,12 @@ button {
   border: none;
   color: #f3f4f6;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.5em;
   background: linear-gradient(0.25turn, #31d35c, #2bb7da);
+  transition: all 0.5s;
+}
+button:hover {
+  opacity: 0.5;
 }
 
 .blockArticles h2, .blockRecomendation h2 {
@@ -44,6 +48,7 @@ header {
   position: fixed;
   width: 100vw;
   height: 50px;
+  background: white;
   z-index: 10;
 }
 header .overBar {
@@ -51,19 +56,17 @@ header .overBar {
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 0;
-  background: white;
 }
-header .overBar button {
+header .overBar__request {
   display: none;
 }
 header .overBar__title {
   padding: 0 1em;
 }
-header .overBar__mobile-menu .open {
-  display: block;
-  padding: 0 1em;
+header .overBar__mobile-menu {
+  padding: 0 2em;
 }
-header .overBar__mobile-menu .close {
+header .overBar__mobile-menu .hamburguer {
   display: none;
 }
 
@@ -72,6 +75,35 @@ header .overBar__mobile-menu .close {
   list-style: none;
 }
 
+@media screen and (min-width: 1024px) {
+  header {
+    height: auto;
+    position: sticky;
+  }
+  header .overBar {
+    max-width: 1024px;
+    margin: auto;
+  }
+  header .overBar .menu {
+    display: flex;
+  }
+  header .overBar .menu__item a {
+    color: #9698a6;
+    font-size: 1.4em;
+    text-decoration: none;
+    padding: 0 1em;
+  }
+  header .overBar .menu__item a:hover {
+    padding-bottom: 30px;
+    border-bottom: 3px solid linear-gradient(0.25turn, #31d35c, #2bb7da);
+  }
+  header .overBar__request {
+    display: block;
+  }
+  header .overBar__mobile-menu {
+    display: none;
+  }
+}
 .blockHeader {
   background-image: url(/images/bg-intro-mobile.svg);
   background-repeat: no-repeat;
@@ -102,6 +134,28 @@ header .overBar__mobile-menu .close {
   margin: 1em 0 2em 0;
 }
 
+@media screen and (min-width: 1024px) {
+  .blockHeader {
+    height: 550px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fafafa;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position-x: 550px;
+    background-position-y: -250px;
+  }
+  .blockHeader__img {
+    width: auto;
+    zoom: 3;
+  }
+  .blockHeader__data {
+    width: 40%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
 .blockRecomendation {
   width: 100%;
   height: auto;

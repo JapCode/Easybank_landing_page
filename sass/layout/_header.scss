@@ -2,26 +2,22 @@ header{
   position: fixed;
   width: 100vw;
   height: 50px;
+  background: $white;
   z-index: 10;
 .overBar {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 0;
-    background: $white;
-    button {
+    &__request {
         display: none;
     }
     &__title {
         padding: 0 1em;
     }
     &__mobile-menu {
-        .open{
-            display: block;
-            padding: 0 1em;
-        }
-        .close{
+        padding: 0 2em;
+        .hamburguer {
             display: none;
         }
     }
@@ -30,4 +26,36 @@ header{
 .menu{
   display: none;
   list-style: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    header {
+        height: auto;
+        position: sticky;
+        .overBar {
+            max-width: 1024px;
+            margin: auto;
+            .menu {
+                display: flex;
+                &__item a{
+                    color: $GrayishBlue;
+                    font-size: 1.4em;
+                    text-decoration: none;
+                    padding: 0 1em;
+                    // transition: all 0.5s;
+                    &:hover{
+                        padding-bottom: 30px;
+                        border-bottom: 3px solid $Gradient;
+                    }
+                }
+            }
+            &__request {
+                display: block;
+            }
+            &__mobile-menu {
+                display: none;
+            }
+        }
+    }
 }
