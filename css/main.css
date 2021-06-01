@@ -42,7 +42,7 @@
   line-height: 2.3rem;
 }
 
-.blockDataFooter__item, .blockDataFooter__legend {
+.blockDataFooter__item, .blockDataFooter__legend:nth-child(2) {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 2.3rem;
@@ -290,8 +290,8 @@ footer {
   padding-bottom: 5px;
 }
 
-.blockDataFooter__legend {
-  margin-bottom: 15px;
+.blockDataFooter__legend:nth-child(2) {
+  margin-top: 15px;
 }
 
 /*--------------------------\

@@ -29,8 +29,8 @@ footer {
   &__End {
     padding-bottom: 5px;
   }
-  &__legend {
-    margin-bottom: 15px;
+  &__legend:nth-child(2) {
+    margin-top: 15px;
     @extend %footer-links;
   }
 }

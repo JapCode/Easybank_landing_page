@@ -50,10 +50,8 @@
     display: none;
   }
   body .blockHeader {
+    position: relative;
     padding: 0;
-    background-image: url(/images/bg-intro-desktop.svg);
-    background-position: calc(58% - -300px) -182px;
-    background-size: cover;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -61,23 +59,47 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-image: none;
+    overflow: hidden;
   }
   body .blockHeader__img {
-    width: 50%;
+    width: 450px;
     position: static;
   }
+  body .blockHeader__backgroundImg {
+    position: absolute;
+    top: -71px;
+    right: -171px;
+    display: block;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 741px;
+    height: 621px;
+    z-index: -1;
+  }
   body .blockHeader__data {
+    text-align: start;
     margin: auto;
-    width: 50%;
-    white-space: pre-wrap;
+    width: 350px;
   }
   body .blockHeader__data h1 {
+    padding: 0;
     margin: 0;
   }
   body .blockHeader__data p {
+    padding: 30px 0;
     margin: 0;
   }
+  body .blockRecomendation {
+    text-align: start;
+    padding: 80px 0;
+  }
   body .blockRecomendation__cards {
+    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -94,11 +116,39 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  body footer {
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body footer .blockDataFooter__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+  }
+  body footer .blockDataFooter__item {
+    text-align: start;
+    line-height: normal;
+  }
+  body footer .blockDataFooter__End {
+    padding: 20px;
+  }
 }
 
 @media only screen and (min-width: 1229px) {
-  body .blockHeader {
-    background-position: calc(58% - -540px) -351px;
+  body .blockHeader__backgroundImg {
+    top: -196px;
+    right: -173px;
+    width: 890px;
+    height: 726px;
   }
   body .blockArticles__articles {
     display: -ms-grid;

@@ -11,6 +11,7 @@
 \--------------------------*/
 body {
   @include respond-to(900px) {
+    // for header
     .header {
       width: 98vw;
       height: 70px;
@@ -38,31 +39,53 @@ body {
     .overBar__mobile-menu {
       display: none;
     }
+    // for hero
     .blockHeader {
+      position: relative;
       padding: 0;
-      background-image: url(/images/bg-intro-desktop.svg);
-      background-position: calc(58% - -300px) -182px;
-      background-size: cover;
       display: flex;
       flex-direction: row-reverse;
+      justify-content: space-around;
+      background-image: none;
+      overflow: hidden;
       &__img {
-        width: 50%;
+        width: 450px;
         position: static;
       }
+      &__backgroundImg {
+        position: absolute;
+        top: -71px;
+        right: -171px;
+        display: block;
+        background-image: url(/images/bg-intro-desktop.svg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 741px;
+        height: 621px;
+        z-index: -1;
+      }
       &__data {
+        text-align: start;
         margin: auto;
-        width: 50%;
-        white-space: pre-wrap;
+        width: 350px;
+        // white-space: pre-wrap;
         h1 {
+          padding: 0;
           margin: 0;
         }
         p {
+          padding: 30px 0;
           margin: 0;
         }
       }
     }
+    // for section of recomendations
     .blockRecomendation {
+      text-align: start;
+      padding: 80px 0;
       &__cards {
+        overflow: hidden;
         display: flex;
       }
     }
@@ -76,10 +99,34 @@ body {
         justify-content: center;
       }
     }
+    footer {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .blockDataFooter {
+        &__container {
+          display: flex;
+          gap: 40px;
+        }
+        &__item {
+          text-align: start;
+          line-height: normal;
+        }
+        &__End {
+          padding: 20px;
+        }
+      }
+    }
   }
   @include respond-to(1229px) {
     .blockHeader {
-      background-position: calc(58% - -540px) -351px;
+      &__backgroundImg {
+        top: -196px;
+        right: -173px;
+        width: 890px;
+        height: 726px;
+      }
     }
     .blockArticles {
       &__articles {
