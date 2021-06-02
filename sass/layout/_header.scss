@@ -3,7 +3,7 @@ position: fixed;
 width: 100vw;
 height: 50px;
 background: $white;
-z-index: 10;
+z-index: 100;
 
 .overBar {
     display: flex;
@@ -14,13 +14,13 @@ z-index: 10;
         display: none;
     }
     &__title {
-        padding: 0 1em;
+      padding: 0 3em;
     }
     &__mobile-menu {
-        padding: 0 2em;
+        padding: 0 3em;
         .lbl-menu .spn1, .spn2, .spn3{
             position: relative;
-            background: $DarkBlue;
+            background: $DarkBlueO;
             width: 30px;
             height: 3px;
             border-radius: 5px;
@@ -32,8 +32,20 @@ z-index: 10;
     }
     &__options .menu{
         display: none;
-        transition: all 500ms ease;
+        animation-duration: 500ms;
+        animation-name: desplace-top;
+        @keyframes desplace-top {
+         from {
+          top: -100%;
+          opacity: 0;
+         }
+         to {
+          top: 103%;
+          opacity: 1;
+         }
+      }
     }
+
     .check{
         display: none;
         &:checked {
@@ -51,6 +63,7 @@ z-index: 10;
                 &__item {
                     padding: 2em 1em;
                     background: $white;
+                    border: none;
                     &:first-child {
                         border-radius: 10px 10px 0 0;
                     }
@@ -62,9 +75,6 @@ z-index: 10;
                         color: $DarkBlue;
                         font-size: $p-size;
                         font-weight: $fontMedium;
-                    }
-                    a:after{
-                        color: pink;
                     }
                 }
             }
@@ -83,6 +93,5 @@ z-index: 10;
             }
         }
     }
+  }
 }
-}
-

@@ -6,15 +6,171 @@
 @import "lib/mixins";
 @import "lib/place-holders";
 
-
 /*--------------------------\
          Media Qery
 \--------------------------*/
-body{
-  @include respond-to(900px){
+body {
+  @include respond-to(900px) {
+
+    //HEADER
+    .header {
+      width: 100vw;
+      height: 70px;
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      .overBar {
+        width: 100%;
+        padding: 0 120px 0 120px;
+        &__mobile-menu {
+          display: none;
+        }
+        &__request{
+          display: block;
+        }
+        &__options {
+        display: block;
+         .menu{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           list-style: none;
+           &__item{
+               margin: 0 10px;
+               padding-bottom: 15px;
+           &:hover{
+           border-bottom: 3px solid $LimeGreen;
+           }
+          }
+           a{
+               text-decoration: none;
+               color: $DarkBlue;
+               font-size: $p-size;
+               font-weight: $fontBold;
+           }
+          }
+        }
+      }
+    }
+
+  //MAIN
+    .container {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+    }
 
 
+    // for hero
+    .blockHeader {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      background-image: none;
+      overflow: hidden;
+      &__img {
+        position: absolute;
+        z-index: 2;
+        width: 43%;
+        top: -160px;
+        right: -66px;
+      }
+      &__backgroundImg {
+        display: block;
+        background-image: url(/images/bg-intro-desktop.svg);
+        background-position: calc(50% - -130px) -144px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 741px;
+        height: 415px;
+      }
+      &__data {
+        text-align: start;
+        margin: auto;
 
+        width: 400px;
+        // white-space: pre-wrap;
+        h1 {
+          padding: 0;
+          padding-top: 60px;
+          margin: 0;
+        }
+        p {
+          padding: 20px 0;
+          margin: 0;
+        }
+      }
+    }
+    // for section of recomendations
+    .blockRecomendation {
+      /* position: absolute;
+      z-index: 2; */
+      text-align: start;
+      padding: 80px 0;
+      &__cards {
+        overflow: hidden;
+        display: flex;
+      }
+    }
+    .card {
+      padding: 0 20px;
+    }
+    .blockArticles {
+      h2 {
+        padding-left: 80px;
+        text-align: start;
+      }
+      &__articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
+        justify-content: center;
+      }
+    }
+    footer {
+      width: 100vw;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    .blockSocial {
+  &__logo {
+    padding: 0 0 30px 0;
   }
 }
-
+      .blockDataFooter {
+        &__container {
+          display: flex;
+          gap: 40px;
+        }
+        &__item {
+          text-align: start;
+          line-height: normal;
+        }
+        &__End {
+          padding: 20px;
+        }
+      }
+    }
+  }
+  @include respond-to(1229px) {
+    .blockHeader {
+      &__backgroundImg {
+        top: -196px;
+        right: -173px;
+      }
+    }
+    .blockArticles {
+      &__articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        &__data {
+          padding: 0 120px;
+        }
+        // display: flex;
+      }
+    }
+  }
+}

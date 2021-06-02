@@ -1,0 +1,158 @@
+/*--------------------------\
+         @Imports
+\--------------------------*/
+/*----------------------------\
+       $Variables
+ \----------------------------*/
+/*----------------------------------\
+          @MIXINS
+ \---------------------------------*/
+/*--------------------------\
+      %Place holders
+\--------------------------*/
+/*--------------------------\
+         Media Qery
+\--------------------------*/
+@media only screen and (min-width: 900px) {
+  body .header {
+    width: 100vw;
+    height: 70px;
+    position: static;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .header .overBar {
+    width: 100%;
+    padding: 0 120px 0 120px;
+  }
+  body .header .overBar__mobile-menu {
+    display: none;
+  }
+  body .header .overBar__request {
+    display: block;
+  }
+  body .header .overBar__options {
+    display: block;
+  }
+  body .header .overBar__options .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  body .header .overBar__options .menu__item {
+    margin: 0 10px;
+    padding-bottom: 15px;
+  }
+  body .header .overBar__options .menu__item:hover {
+    border-bottom: 3px solid #31d35c;
+  }
+  body .header .overBar__options .menu a {
+    text-decoration: none;
+    color: #2d314d;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  body .container {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  body .blockHeader {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background-image: none;
+    overflow: hidden;
+  }
+  body .blockHeader__img {
+    position: absolute;
+    z-index: 2;
+    width: 43%;
+    top: -160px;
+    right: -66px;
+  }
+  body .blockHeader__backgroundImg {
+    display: block;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-position: calc(50% - -130px) -144px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 741px;
+    height: 415px;
+  }
+  body .blockHeader__data {
+    text-align: start;
+    margin: auto;
+    width: 400px;
+  }
+  body .blockHeader__data h1 {
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+  }
+  body .blockHeader__data p {
+    padding: 20px 0;
+    margin: 0;
+  }
+  body .blockRecomendation {
+    /* position: absolute;
+    z-index: 2; */
+    text-align: start;
+    padding: 80px 0;
+  }
+  body .blockRecomendation__cards {
+    overflow: hidden;
+    display: flex;
+  }
+  body .card {
+    padding: 0 20px;
+  }
+  body .blockArticles h2 {
+    padding-left: 80px;
+    text-align: start;
+  }
+  body .blockArticles__articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
+    justify-content: center;
+  }
+  body footer {
+    width: 100vw;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  body footer .blockSocial__logo {
+    padding: 0 0 30px 0;
+  }
+  body footer .blockDataFooter__container {
+    display: flex;
+    gap: 40px;
+  }
+  body footer .blockDataFooter__item {
+    text-align: start;
+    line-height: normal;
+  }
+  body footer .blockDataFooter__End {
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 1229px) {
+  body .blockHeader__backgroundImg {
+    top: -196px;
+    right: -173px;
+  }
+  body .blockArticles__articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  body .blockArticles__articles__data {
+    padding: 0 120px;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

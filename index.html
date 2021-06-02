@@ -26,7 +26,7 @@
           <img src="./images/logo.svg" alt="Logo" />
         </div>
         <input type="checkbox" class="check" id="menu">
-        <nav class="overBar__options desktop-off">
+        <nav class="overBar__options">
           <ul class="menu">
             <li class="menu__item">
               <a href="">Home</a>
@@ -45,8 +45,8 @@
             </li>
           </ul>
         </nav>
-        <div class="overBar__request desktop-off">
-          <button>Request Invite</button>
+        <div class="overBar__request">
+          <button class="btn">Request Invite</button>
         </div>
         <div class="overBar__mobile-menu">
           <label for="menu" class="lbl-menu">
@@ -58,10 +58,11 @@
       </section>
     </header>
 
-    <main>
+    <main class="container">
       <!-- Block Header -->
       <section class="blockHeader">
         <img class="blockHeader__img" src="images/image-mockups.png" alt="" />
+        <div class="blockHeader__backgroundImg"></div>
         <div class="blockHeader__data">
           <h1>Next generation digital banking</h1>
           <p>
@@ -69,7 +70,7 @@
             one-stop-shop for spending. saving. building. investing. and much
             more.
           </p>
-          <button>Request Invite</button>
+          <button class="btn">Request Invite</button>
         </div>
         <div class="blockHeader-PhoneImg"></div>
       </section>
@@ -183,11 +184,11 @@
     <!--FOOTER-->
     <footer>
       <section class="blockSocial">
-        <div class="blockSocial-__logo">
-          <img src="./images/logo.svg" alt="Logo-footer" />
+        <div class="blockSocial__logo">
+          <img src="./images/logo_footer.svg" alt="Logo-footer" />
         </div>
         <div class="blockSocial__socialMedia">
-          <img src="./images/icon-facebook.svg" alt="Facebook" />
+          <img class="blocks" src="./images/icon-facebook.svg" alt="Facebook" />
           <img src="./images/icon-youtube.svg" alt="Youtube" />
           <img src="./images/icon-twitter.svg" alt="Twitter" />
           <img src="./images/icon-pinterest.svg" alt="Pinterest" />
@@ -198,24 +199,24 @@
         <div class="blockDataFooter__container">
           <div class="blockDataFooter__data">
             <ul>
-              <li>About us</li>
-              <li>Contact</li>
-              <li>Blog</li>
+              <li class="blockDataFooter__item">About us</li>
+              <li class="blockDataFooter__item">Contact</li>
+              <li class="blockDataFooter__item">Blog</li>
             </ul>
           </div>
           <div class="blockDataFooter__data">
             <ul>
-              <li>Careers</li>
-              <li>Support</li>
-              <li>Privacity Policy</li>
+              <li class="blockDataFooter__item">Careers</li>
+              <li class="blockDataFooter__item">Support</li>
+              <li class="blockDataFooter__item">Privacity Policy</li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="blockButtonEnd">
-        <button>Request Invite</button>
-        <i></i>
-      </section>
+      <div class="blockDataFooter__End">
+        <button class="blockDataFooter__legend btn">Request Invite</button>
+        <p class="blockDataFooter__legend">© Easybank. All Rights Reserved</p>
+      </div>
     </footer>
   </body>
 </html>
