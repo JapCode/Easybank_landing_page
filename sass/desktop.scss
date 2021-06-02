@@ -10,13 +10,14 @@
          Media Qery
 \--------------------------*/
 body {
+  overflow-x: hidden;
   @include respond-to(900px) {
-
     //HEADER
     .header {
-      width: 100vw;
+      width: 100%;
       height: 70px;
-      position: static;
+      position: relative;
+      z-index: 4;
       display: flex;
       justify-content: space-between;
       .overBar {
@@ -25,71 +26,82 @@ body {
         &__mobile-menu {
           display: none;
         }
-        &__request{
-          display: block;
+        &__request {
+          display: none;
         }
         &__options {
-        display: block;
-         .menu{
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           list-style: none;
-           &__item{
-               margin: 0 10px;
-               padding-bottom: 15px;
-           &:hover{
-           border-bottom: 3px solid $LimeGreen;
-           }
-          }
-           a{
-               text-decoration: none;
-               color: $DarkBlue;
-               font-size: $p-size;
-               font-weight: $fontBold;
-           }
+          display: block;
+          .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            &__item {
+              margin: 0 10px;
+              padding-bottom: 15px;
+              &:hover {
+                border-bottom: 3px solid $LimeGreen;
+                cursor: pointer;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: $DarkBlue;
+              font-size: $p-size;
+              font-weight: $fontBold;
+            }
           }
         }
       }
     }
 
-  //MAIN
+    //MAIN
     .container {
-      overflow: hidden;
       position: relative;
       z-index: 1;
-
+      width: 100vw;
+      &__mainContent {
+        background-color: $LightGrayishBlue;
+      }
+      &__hero {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+      }
+      &__Articles {
+        background-color: $VeryLightGray;
+        width: 100%;
+        margin: 0 auto;
+      }
     }
-
 
     // for hero
     .blockHeader {
       padding: 0;
-      display: flex;
-      align-items: center;
-      flex-direction: row-reverse;
-      justify-content: space-around;
+      text-align: start;
       background-image: none;
-      overflow: hidden;
+      width: 300px;
+      height: 400px;
       &__img {
         position: absolute;
         z-index: 2;
-        width: 43%;
-        top: -160px;
-        right: -66px;
+        width: calc(75% - 100px);
+        top: calc(50% - 29vw);
+        right: calc(50% - 59vw);
       }
       &__backgroundImg {
         display: block;
-        background-image: url(/images/bg-intro-desktop.svg);
-        background-position: calc(50% - -130px) -144px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 741px;
-        height: 415px;
+        position: absolute;
+        width: calc(100% - 100px);
+        right: calc(100% - 105vw);
+        top: calc(50% - 34vw);
       }
       &__data {
+        display: inline;
+        position: static;
         text-align: start;
-        margin: auto;
+        width: 400px;
+        height: 300px;
 
         width: 400px;
         // white-space: pre-wrap;
@@ -106,19 +118,36 @@ body {
     }
     // for section of recomendations
     .blockRecomendation {
+      margin: 0 auto;
+      width: 80%;
       /* position: absolute;
       z-index: 2; */
       text-align: start;
-      padding: 80px 0;
+      // padding: 80px 0;
+      /* &__data {
+        padding-bottom: 20px;
+        
+      } */
+      &__data {
+        padding: 0;
+        width: 70%;
+      }
       &__cards {
+        padding: 0;
+        width: 90vw;
+        margin: 0 auto;
         overflow: hidden;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        .card {
+          width: 300px;
+          padding: 0;
+        }
       }
     }
-    .card {
-      padding: 0 20px;
-    }
     .blockArticles {
+      width: 90%;
+      margin: 0 auto;
       h2 {
         padding-left: 80px;
         text-align: start;
@@ -130,42 +159,82 @@ body {
       }
     }
     footer {
-      width: 100vw;
-      padding: 20px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-    .blockSocial {
-  &__logo {
-    padding: 0 0 30px 0;
-  }
-}
-      .blockDataFooter {
-        &__container {
-          display: flex;
-          gap: 40px;
+      width: 100%;
+      .footer__container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .blockSocial {
+          &__logo {
+            padding: 0 0 30px 0;
+          }
+          &__socialMedia img {
+            cursor: pointer;
+          }
         }
-        &__item {
-          text-align: start;
-          line-height: normal;
-        }
-        &__End {
-          padding: 20px;
+        .blockDataFooter {
+          &__container {
+            display: flex;
+            gap: 40px;
+          }
+          &__item {
+            text-align: start;
+            line-height: normal;
+            cursor: pointer;
+          }
+          /*  &__End {
+            padding: 20px;
+          } */
         }
       }
     }
   }
-  @include respond-to(1229px) {
-    .blockHeader {
-      &__backgroundImg {
-        top: -196px;
-        right: -173px;
+  @include respond-to(1227px) {
+    .header {
+      .overBar {
+        &__request {
+          display: block;
+        }
       }
+    }
+    .blockRecomendation {
+      &__data {
+        width: 40%;
+      }
+      &__cards {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        .card {
+          width: 200px;
+          padding: 0;
+        }
+      }
+    }
+    .blockHeader {
+      &__img {
+        width: calc(69% - 100px);
+        top: calc(50% - 23vw);
+        right: calc(50% - 57vw);
+      }
+      &__backgroundImg {
+        width: calc(100% - 100px);
+        right: calc(100% - 105vw);
+        top: calc(50% - 29vw);
+      }
+    }
+    .container__hero {
+      margin-bottom: 151px;
     }
     .blockArticles {
       &__articles {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
         &__data {
           padding: 0 120px;
         }
