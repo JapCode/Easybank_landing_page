@@ -56,9 +56,10 @@
         h3 {
           padding-bottom: 1rem;
           @extend %h3-text;
-        &:hover{
-          color: $BrightCyan;
-        }
+          &:hover {
+            cursor: pointer;
+            color: $LimeGreen;
+          }
         }
         p {
           font-size: 1.6rem;

@@ -335,7 +335,8 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
 }
 
 .blockArticles__articles .articleBox__data h3:hover {
-  color: #2bb7da;
+  cursor: pointer;
+  color: #31d35c;
 }
 
 .blockArticles__articles .articleBox__data p {

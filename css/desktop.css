@@ -70,6 +70,7 @@ body {
     font-weight: 500;
   }
   body .container {
+    overflow-x: hidden;
     position: relative;
     z-index: 1;
     width: 100vw;
@@ -128,13 +129,7 @@ body {
   body .blockRecomendation {
     margin: 0 auto;
     width: 80%;
-    /* position: absolute;
-      z-index: 2; */
     text-align: start;
-    /* &__data {
-        padding-bottom: 20px;
-        
-      } */
   }
   body .blockRecomendation__data {
     padding: 0;
@@ -150,8 +145,8 @@ body {
     -ms-grid-columns: (minmax(360px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   }
-  body .blockRecomendation__cards .card {
-    width: 300px;
+  body .blockRecomendation .card {
+    width: 70%;
     padding: 0;
   }
   body .blockArticles {
@@ -167,6 +162,7 @@ body {
     display: grid;
     -ms-grid-columns: (minmax(320px, 40%))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
+    gap: 60px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -193,11 +189,6 @@ body {
   body footer .footer__container .blockSocial__socialMedia img {
     cursor: pointer;
   }
-  body footer .footer__container .blockDataFooter {
-    /*  &__End {
-            padding: 20px;
-          } */
-  }
   body footer .footer__container .blockDataFooter__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -216,11 +207,11 @@ body {
     display: block;
   }
   body .blockRecomendation__data {
-    width: 40%;
+    width: 60%;
   }
   body .blockRecomendation__cards {
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
     display: -ms-grid;
     display: grid;
@@ -228,8 +219,11 @@ body {
         grid-template-columns: repeat(4, 25%);
   }
   body .blockRecomendation__cards .card {
-    width: 200px;
-    padding: 0;
+    width: 94%;
+    padding-right: 20px;
+  }
+  body .blockHeader {
+    width: 350px;
   }
   body .blockHeader__img {
     width: calc(69% - 100px);

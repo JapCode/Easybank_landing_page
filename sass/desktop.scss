@@ -57,6 +57,7 @@ body {
 
     //MAIN
     .container {
+      overflow-x: hidden;
       position: relative;
       z-index: 1;
       width: 100vw;
@@ -104,7 +105,6 @@ body {
         height: 300px;
 
         width: 400px;
-        // white-space: pre-wrap;
         h1 {
           padding: 0;
           padding-top: 60px;
@@ -120,14 +120,7 @@ body {
     .blockRecomendation {
       margin: 0 auto;
       width: 80%;
-      /* position: absolute;
-      z-index: 2; */
       text-align: start;
-      // padding: 80px 0;
-      /* &__data {
-        padding-bottom: 20px;
-        
-      } */
       &__data {
         padding: 0;
         width: 70%;
@@ -139,12 +132,13 @@ body {
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        .card {
-          width: 300px;
-          padding: 0;
-        }
+      }
+      .card {
+        width: 70%;
+        padding: 0;
       }
     }
+    // for section of articles
     .blockArticles {
       width: 90%;
       margin: 0 auto;
@@ -155,9 +149,11 @@ body {
       &__articles {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 40%));
+        gap: 60px;
         justify-content: center;
       }
     }
+    // for footer
     footer {
       width: 100%;
       .footer__container {
@@ -184,14 +180,13 @@ body {
             line-height: normal;
             cursor: pointer;
           }
-          /*  &__End {
-            padding: 20px;
-          } */
         }
       }
     }
   }
+  // breakpoint__2
   @include respond-to(1227px) {
+    // for header
     .header {
       .overBar {
         &__request {
@@ -199,23 +194,26 @@ body {
         }
       }
     }
+    // for recomendations
     .blockRecomendation {
       &__data {
-        width: 40%;
+        width: 60%;
       }
       &__cards {
         width: 100%;
-        margin: 0 auto;
+        margin: 20px auto;
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(4, 25%);
         .card {
-          width: 200px;
-          padding: 0;
+          width: 94%;
+          padding-right: 20px;
         }
       }
     }
+    // for header
     .blockHeader {
+      width: 350px;
       &__img {
         width: calc(69% - 100px);
         top: calc(50% - 23vw);
@@ -227,9 +225,11 @@ body {
         top: calc(50% - 29vw);
       }
     }
+    // for hero
     .container__hero {
       margin-bottom: 151px;
     }
+    // for articles
     .blockArticles {
       &__articles {
         display: grid;
@@ -238,7 +238,6 @@ body {
         &__data {
           padding: 0 120px;
         }
-        // display: flex;
       }
     }
   }
