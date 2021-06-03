@@ -262,7 +262,7 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
 }
 .blockArticles__articles .articleBox__data h3:hover {
   cursor: pointer;
-  color: #31d35c;
+  color: #2bb7da;
 }
 .blockArticles__articles .articleBox__data p {
   font-size: 1.6rem;

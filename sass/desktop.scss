@@ -14,7 +14,7 @@ body {
   @include respond-to(900px) {
     //HEADER
     .header {
-      width: 100%;
+      width: 100vw;
       height: 70px;
       position: relative;
       z-index: 4;
