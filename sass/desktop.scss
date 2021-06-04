@@ -47,7 +47,7 @@ body {
               &:hover {
                 color: $DarkBlue;
                 border-bottom: 3px solid $LimeGreen;
-                padding-bottom: 24px;
+                padding-bottom: 15px;
                 cursor: pointer;
               }
             }
@@ -191,9 +191,9 @@ body {
           }
           &__socialMedia {
             justify-content: space-between;
-            img{
-            cursor: pointer;
-          }
+            img {
+              cursor: pointer;
+            }
           }
         }
         .blockDataFooter {
@@ -214,66 +214,66 @@ body {
             font-size: $p-size;
             padding-top: 1em;
           }
+        }
       }
     }
-  }
 
-  // breakpoint__2
-  @include respond-to(1227px) {
-    // for header
-    .header {
-      .overBar {
-        &__request {
-          display: block;
+    // breakpoint__2
+    @include respond-to(1227px) {
+      // for header
+      .header {
+        .overBar {
+          &__request {
+            display: block;
+          }
         }
       }
-    }
-    // for recomendations
-    .blockRecomendation {
-      &__data {
-        width: 60%;
-      }
-      &__cards {
-        width: 100%;
-        margin: 20px auto;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        .card {
-          width: 94%;
-          padding-right: 20px;
-        }
-      }
-    }
-    // for header
-    .blockHeader {
-      width: 350px;
-      &__img {
-        width: calc(69% - 100px);
-        top: calc(50% - 23vw);
-        right: calc(50% - 57vw);
-      }
-      &__backgroundImg {
-        width: calc(100% - 100px);
-        right: calc(100% - 105vw);
-        top: calc(50% - 29vw);
-      }
-    }
-    // for hero
-    .container__hero {
-      margin-bottom: 151px;
-    }
-    // for articles
-    .blockArticles {
-      &__articles {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
+      // for recomendations
+      .blockRecomendation {
         &__data {
-          padding: 0 120px;
+          width: 60%;
+        }
+        &__cards {
+          width: 100%;
+          margin: 20px auto;
+          overflow: hidden;
+          display: grid;
+          grid-template-columns: repeat(4, 25%);
+          .card {
+            width: 94%;
+            padding-right: 20px;
+          }
+        }
+      }
+      // for header
+      .blockHeader {
+        width: 350px;
+        &__img {
+          width: calc(69% - 100px);
+          top: calc(50% - 23vw);
+          right: calc(50% - 57vw);
+        }
+        &__backgroundImg {
+          width: calc(100% - 100px);
+          right: calc(100% - 105vw);
+          top: calc(50% - 29vw);
+        }
+      }
+      // for hero
+      .container__hero {
+        margin-bottom: 151px;
+      }
+      // for articles
+      .blockArticles {
+        &__articles {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 15px;
+          &__data {
+            padding: 0 120px;
+          }
         }
       }
     }
   }
-}
 }
