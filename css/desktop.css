@@ -74,6 +74,7 @@ body {
     position: relative;
     z-index: 1;
     width: 100vw;
+    background-color: #fafafa;
   }
   body .container__mainContent {
     background-color: #f3f4f6;

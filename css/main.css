@@ -181,7 +181,7 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
 }
 
 .blockHeader {
-  background-image: url(/images/bg-intro-mobile.svg);
+  background-image: url(./images/bg-intro-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 1em;
