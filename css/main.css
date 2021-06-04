@@ -14,30 +14,29 @@
   border-radius: 100px;
   outline: none;
   cursor: pointer;
-  padding: 15px 30px;
+  padding: 13px 30px;
   border: none;
   color: #f3f4f6;
   font-weight: 600;
   font-size: 1.3rem;
   letter-spacing: 0.5px;
-  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(0.25turn, #31d35c, #2bb7da);
 }
 
-.blockRecomendation h2, .blockArticles h2 {
+.blockArticles h2, .blockRecomendation h2 {
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 2.6rem;
 }
 
-.blockRecomendation__cards h3, .blockArticles__articles .articleBox__data h3 {
+.blockArticles__articles .articleBox__data h3, .blockRecomendation__cards h3 {
   font-size: 2rem;
   font-weight: 500;
   line-height: 2.6rem;
 }
 
-.blockHeader__data p, .blockRecomendation p, .blockRecomendation__cards p {
-  font-size: 1.8rem;
+.blockRecomendation__cards p, .blockRecomendation p, .blockHeader__data p {
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.3rem;
 }
@@ -55,65 +54,37 @@ header {
   background: white;
   z-index: 100;
 }
-
 header .overBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5em 0;
 }
-
 header .overBar__request {
   display: none;
 }
-
 header .overBar__title {
   padding: 0 3em;
 }
-
 header .overBar__mobile-menu {
   padding: 0 3em;
 }
-
 header .overBar__mobile-menu .lbl-menu .spn1, header .overBar__mobile-menu .spn2, header .overBar__mobile-menu .spn3 {
   position: relative;
   background: rgba(45, 49, 77, 0.8);
   width: 30px;
   height: 3px;
   border-radius: 5px;
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
-
 header .overBar__mobile-menu .spn2 {
   margin: 5px 0;
 }
-
 header .overBar__options .menu {
   display: none;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
-  -webkit-animation-name: desplace-top;
-          animation-name: desplace-top;
+  animation-duration: 500ms;
+  animation-name: desplace-top;
 }
-
-@-webkit-keyframes desplace-top {
-  from {
-    top: -100%;
-    opacity: 0;
-  }
-  to {
-    top: 103%;
-    opacity: 1;
-  }
-}
-
 @keyframes desplace-top {
   from {
     top: -100%;
@@ -124,11 +95,9 @@ header .overBar__options .menu {
     opacity: 1;
   }
 }
-
 header .overBar .check {
   display: none;
 }
-
 header .overBar .check:checked ~ .overBar__options .menu {
   display: block;
   position: absolute;
@@ -139,44 +108,34 @@ header .overBar .check:checked ~ .overBar__options .menu {
   right: 0;
   list-style: none;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 49, 77, 0.8)), to(rgba(255, 255, 255, 0.5)));
   background: linear-gradient(to bottom, rgba(45, 49, 77, 0.8), rgba(255, 255, 255, 0.5));
 }
-
 header .overBar .check:checked ~ .overBar__options .menu__item {
   padding: 2em 1em;
   background: white;
   border: none;
 }
-
 header .overBar .check:checked ~ .overBar__options .menu__item:first-child {
   border-radius: 10px 10px 0 0;
 }
-
 header .overBar .check:checked ~ .overBar__options .menu__item:last-child {
   border-radius: 0 0 10px 10px;
 }
-
 header .overBar .check:checked ~ .overBar__options .menu__item a {
   text-decoration: none;
   color: #2d314d;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
-
 header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn1 {
-  -webkit-transform: rotate(140deg);
-          transform: rotate(140deg);
+  transform: rotate(140deg);
   top: 5px;
 }
-
 header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn2 {
   opacity: 0;
 }
-
 header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
-  -webkit-transform: rotate(-140deg);
-          transform: rotate(-140deg);
+  transform: rotate(-140deg);
   top: -11px;
 }
 
@@ -187,33 +146,28 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
   padding-left: 1em;
   padding-right: 1em;
 }
-
 .blockHeader__img {
   width: 100%;
   margin: 0 auto;
   position: relative;
   bottom: 80px;
 }
-
 .blockHeader__data {
   margin: auto;
   text-align: center;
   position: relative;
   bottom: 50px;
 }
-
 .blockHeader__data h1 {
   padding: 0 1em;
   margin-bottom: 0.5em;
   font-size: 3.5rem;
   font-weight: 500;
 }
-
 .blockHeader__data p {
   padding: 0 1em;
   margin: 1em 0 2em 0;
 }
-
 .blockHeader__backgroundImg {
   display: none;
 }
@@ -223,39 +177,28 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
   height: auto;
   background-color: #f3f4f6;
   padding: 6em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
-
 .blockRecomendation__data {
   padding: 0 3em;
   margin-bottom: 3em;
 }
-
 .blockRecomendation h2 {
   margin-bottom: 1em;
 }
-
 .blockRecomendation__cards {
   padding: 0 3em;
 }
-
 .blockRecomendation__cards img {
   margin-bottom: 0.5em;
   height: 70px;
   width: 70px;
 }
-
 .blockRecomendation__cards h3 {
   margin-bottom: 1em;
 }
-
 .blockRecomendation__cards p {
   margin-bottom: 1.5em;
 }
@@ -270,38 +213,27 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
   padding: 4em 0;
   text-align: center;
 }
-
 .blockArticles h2 {
   margin-bottom: 1em;
 }
-
 .blockArticles__articles {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 35px;
 }
-
 .blockArticles__articles .articleBox {
   background-color: white;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
   height: auto;
   padding-bottom: 1em;
   text-align: start;
 }
-
 .blockArticles__articles .articleBox .articleImg {
   width: 100%;
   max-width: 720px;
@@ -309,36 +241,29 @@ header .overBar .check:checked ~ .overBar__mobile-menu .lbl-menu .spn3 {
   padding-bottom: 15px;
   margin: 0 auto;
 }
-
 .blockArticles__articles .articleBox .articleImg img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
   height: 200px;
 }
-
 .blockArticles__articles .articleBox__data {
   padding: 0 2em;
 }
-
 .blockArticles__articles .articleBox__data i {
   font-size: 1rem;
   font-weight: 300;
   line-height: 2.3rem;
   padding-bottom: 0.5rem;
 }
-
 .blockArticles__articles .articleBox__data h3 {
   padding-bottom: 1rem;
 }
-
 .blockArticles__articles .articleBox__data h3:hover {
   cursor: pointer;
-  color: #31d35c;
+  color: #2bb7da;
 }
-
 .blockArticles__articles .articleBox__data p {
   font-size: 1.6rem;
   font-weight: 300;
@@ -355,39 +280,29 @@ footer {
 .blockSocial__logo {
   padding: 30px 0;
 }
-
 .blockSocial__socialMedia {
   margin: 0 auto;
   max-width: 60vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .blockDataFooter {
   margin: 20px;
 }
-
 .blockDataFooter__item {
   padding: 5px;
   list-style: none;
 }
-
 .blockDataFooter__item:hover {
   color: #31d35c;
 }
-
 .blockDataFooter__data {
   list-style: none;
 }
-
 .blockDataFooter__End {
   padding-bottom: 5px;
 }
-
 .blockDataFooter__legend:nth-child(2) {
   margin-top: 15px;
 }
@@ -419,7 +334,7 @@ i {
 }
 
 .btn:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#53df78), to(#3fcff3));
   background-image: linear-gradient(0.25turn, #53df78, #3fcff3);
 }
+
 /*# sourceMappingURL=main.css.map */
