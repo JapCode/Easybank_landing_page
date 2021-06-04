@@ -1,0 +1,33 @@
+.blockHeader {
+  background-image: url(../images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 1em;
+  padding-right: 1em;
+  &__img {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 80px;
+  }
+  &__data {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    h1 {
+      padding: 0 1em;
+      margin-bottom: 0.5em;
+      font-size: $h1-size;
+      font-weight: $fontBold;
+    }
+    p {
+      padding: 0 1em;
+      margin: 1em 0 2em 0;
+      @extend %p-text;
+    }
+  }
+  &__backgroundImg {
+    display: none;
+  }
+}
